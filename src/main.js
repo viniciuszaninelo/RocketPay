@@ -64,12 +64,12 @@ const cardNumberPattern = {
       cardtype: 'default',
     }
   ],
-  dispatch: function () {
+  dispatch: function (appended, dynamicMasked) {
     const number = (dynamicMasked.value + appended).replace(/\D/g, "")
-    const foundMask = dynamicMasked.compiledMask.find(function(item) {
+    const foundMask = dynamicMasked.compiledMasks.find(function (item) {
       return number.match(item.regex)
-    })
+    }) 
     return foundMask
   },
 }
-const cardNumberMask = IMask(cardNumber, cardNumberPattern) 
+const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
