@@ -1,16 +1,12 @@
 A FAZER 
 
-- Fazer opções de bandeiras diferentes []
+[ ] Fazer opções de bandeiras diferentes
  . Elo 
  . American Express
  . Hipercard
 
 
 
-
--
--
--
 
 
 
