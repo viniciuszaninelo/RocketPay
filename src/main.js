@@ -73,3 +73,19 @@ const cardNumberPattern = {
   },
 }
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
+
+const addButton = document.querySelector("#add-card")
+addButton.addEventListener("click",() => {
+  alert("cartão adicionado!!!")
+})
+
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault() //nao recarregue a página por padrão,apenas se eu mandar
+})
+
+const cardHolder = document.querySelector("#card-holder")
+cardHolder.addEventListener("input", () => {
+  const ccHolder = document.querySelector(".cc-holder .value")
+
+  ccHolder.innerText = cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
+})
